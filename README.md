@@ -49,4 +49,4 @@ and web applications using a variety of programming languages such as C#, Visual
 
 # How does it work?
 
-For more information about SciRMang, Please read chapters in documentation 0.1  <a href="documentation 0.1">here</a>. 
+For more information about SciRMang, Please read the SciRMang documentation 0.1  <a href="documentation 0.1">here</a>. 
