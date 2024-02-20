@@ -34,10 +34,14 @@ and web applications using a variety of programming languages such as C#, Visual
 **Bootstrap**
 **Data Base SQL Server**
 ```
-# programs page
+# page
 
 <br>
 <div align=left> <img src="pic/home.png" height="100%" width="100%"/> </div>
+<br>
+<div align=left> <img src="pic/author.png" height="100%" width="100%"/> </div>
+<br>
+<div align=left> <img src="pic/editor.png" height="100%" width="100%"/> </div>
 
 # How does it work?
 
