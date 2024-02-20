@@ -41,4 +41,4 @@ and web applications using a variety of programming languages such as C#, Visual
 
 # How does it work?
 
-Please read the NUISTISD Instructions file  <a href="NUISTISD Instructions.pdf">here</a>. 
+For more information about SciRMang, Please read chapters in documentation 0.1  <a href="documentation 0.1">here</a>. 
