@@ -1,0 +1,217 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{28B65A87-25DE-4ACD-A3E6-10E5A8AD4954}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="agree to review conformation.aspx" />
+    <Content Include="Auther%27s Response to Reviewer Comments.aspx" />
+    <Content Include="Decline review confirmation.aspx" />
+    <Content Include="Decline review.aspx" />
+    <Content Include="new reviewer invitation.aspx" />
+    <Content Include="Pending ReviewerAssignments.aspx" />
+    <Content Include="Reviewer Recommendation and comments for Menuscript Number2.aspx" />
+    <Content Include="Reviewer Recommendation and comments.aspx" />
+    <Content Include="Thank you for Reviewing.aspx" />
+    <Content Include="update my information.aspx" />
+    <Content Include="errorlogin.aspx" />
+    <Content Include="registerRev.aspx" />
+    <Content Include="Reviewer Main Menue.aspx" />
+    <Content Include="confirm information update1.aspx" />
+    <Content Include="View Reviewer Commentsaspx.aspx" />
+    <Content Include="View Submission.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="agree to review conformation.aspx.cs">
+      <DependentUpon>agree to review conformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="agree to review conformation.aspx.designer.cs">
+      <DependentUpon>agree to review conformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auther%27s Response to Reviewer Comments.aspx.cs">
+      <DependentUpon>Auther%27s Response to Reviewer Comments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auther%27s Response to Reviewer Comments.aspx.designer.cs">
+      <DependentUpon>Auther%27s Response to Reviewer Comments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Decline review confirmation.aspx.cs">
+      <DependentUpon>Decline review confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Decline review confirmation.aspx.designer.cs">
+      <DependentUpon>Decline review confirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Decline review.aspx.cs">
+      <DependentUpon>Decline review.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Decline review.aspx.designer.cs">
+      <DependentUpon>Decline review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="new reviewer invitation.aspx.cs">
+      <DependentUpon>new reviewer invitation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="new reviewer invitation.aspx.designer.cs">
+      <DependentUpon>new reviewer invitation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pending ReviewerAssignments.aspx.cs">
+      <DependentUpon>Pending ReviewerAssignments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pending ReviewerAssignments.aspx.designer.cs">
+      <DependentUpon>Pending ReviewerAssignments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reviewer Recommendation and comments for Menuscript Number2.aspx.cs">
+      <DependentUpon>Reviewer Recommendation and comments for Menuscript Number2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reviewer Recommendation and comments for Menuscript Number2.aspx.designer.cs">
+      <DependentUpon>Reviewer Recommendation and comments for Menuscript Number2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reviewer Recommendation and comments.aspx.cs">
+      <DependentUpon>Reviewer Recommendation and comments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reviewer Recommendation and comments.aspx.designer.cs">
+      <DependentUpon>Reviewer Recommendation and comments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Thank you for Reviewing.aspx.cs">
+      <DependentUpon>Thank you for Reviewing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Thank you for Reviewing.aspx.designer.cs">
+      <DependentUpon>Thank you for Reviewing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="update my information.aspx.cs">
+      <DependentUpon>update my information.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="update my information.aspx.designer.cs">
+      <DependentUpon>update my information.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="errorlogin.aspx.cs">
+      <DependentUpon>errorlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="errorlogin.aspx.designer.cs">
+      <DependentUpon>errorlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registerRev.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>registerRev.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registerRev.aspx.designer.cs">
+      <DependentUpon>registerRev.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reviewer Main Menue.aspx.cs">
+      <DependentUpon>Reviewer Main Menue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reviewer Main Menue.aspx.designer.cs">
+      <DependentUpon>Reviewer Main Menue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="confirm information update1.aspx.cs">
+      <DependentUpon>confirm information update1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="confirm information update1.aspx.designer.cs">
+      <DependentUpon>confirm information update1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View Reviewer Commentsaspx.aspx.cs">
+      <DependentUpon>View Reviewer Commentsaspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View Reviewer Commentsaspx.aspx.designer.cs">
+      <DependentUpon>View Reviewer Commentsaspx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View Submission.aspx.cs">
+      <DependentUpon>View Submission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View Submission.aspx.designer.cs">
+      <DependentUpon>View Submission.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2307</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

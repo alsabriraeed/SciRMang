@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server"><link href="StyleSheet.css" type="text/css" rel="Stylesheet" />
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #form1
+        {
+            height: 790px;
+            margin-right: 0px;
+        }
+        .style5
+        {
+            width: 100%;
+            height: 762px;
+        }
+        .style6
+        {
+            width: 96%;
+            height: 645px;
+        }
+        .style8
+        {
+            height: 116px;
+            background-image: url('file:///G:/E_Journal%20project/images/main.jpg');
+            width: 96%;
+        }
+        .style11
+        {
+            width: 10px;
+        }
+        .style12
+        {
+            width: 2%;
+        }
+        </style>
+</head>
+<body>
+        <form id="form1" runat="server">
+        <table class="style5" style="border-style: none" >
+            <tr>
+                <td class="c" rowspan="2" style="border-style: none; background-color: #003366">
+                    </td>
+                <td class="style8" style="border-style: none">
+                    </td>
+                <td class="c" rowspan="2" style="border-style: none; background-color: #003366">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="style6" valign="top">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="c">
+                 
+                    &nbsp;</td>
+            </tr>
+        </table>
+        </form>
+    
+        </body>
+</html>

@@ -1,0 +1,272 @@
+
+
+                WinRAR - What's new in the latest version
+
+
+   Version 3.71
+
+   1. Archive names in rar.log error log file always include
+      the full path.
+
+   2. WinRAR tray icon is compatible with high DPI display modes.
+
+   3. If you modified a file in archive with encrypted names using
+      an external editor, WinRAR will not ask for archive password again
+      when prompting to update a file. It will use a password which
+      you entered when opening an archive,
+
+   4. Bugs fixed:
+
+      a) switch -tl and "Set archive time to latest file time" option
+         could fail in previous version. Sometimes they set archive time
+         to current system time instead of latest file time;
+
+      b) if -ag switch mask contained archive number, month and minute
+         characters, WinRAR placed 'I' character instead of minute value
+         into generated archive name for archive numbers exceeding 1;
+
+      c) high ASCII names in ISO files using ISO 9660 format without
+         Joliet format extension were displayed incorrectly;
+
+      d) WinRAR could crash when decompressing some of corrupt RAR archives;
+
+      e) if "Turn PC off when done" option was set in "Convert archives"
+         command, WinRAR turned PC off after converting the first archive
+         in selected group instead of after converting the entire group;
+
+      f) if user specified a non-existent destination path in SFX archive
+         in Vista, SFX could enter into infinite "create new SFX window"
+         loop;
+
+      g) WinRAR could fail to unpack an individual file from subfolder
+         of ACE archive using the drag and drop.
+
+
+   Version 3.70
+
+   1. Numerous Windows Vista compatibility changes:
+
+      a) help format changed from old HLP to newer HTML based CHM;
+
+      b) GUI self-extracting modules attempt to request for
+         administrator permissions if they cannot create destination
+         folder under current user account;
+
+      c) Log file rar.log and WinRAR theme files are stored
+         in %APPDATA%\WinRAR folder instead of WinRAR program files folder.
+
+         Exported settings file settings.reg is also stored
+         in %APPDATA%\WinRAR folder by default, but it is possible to
+         select another folder in "Save WinRAR settings" and "Load WinRAR
+         settings" dialogs.
+
+         WinRAR searches for registration key and settings.reg
+         both in its program files folder and in %APPDATA%\WinRAR;
+
+         It is possible to set the string value "AppData" in Registry key
+         HKEY_CURRENT_USER\Software\WinRAR\Paths to override the default
+         %appdata%\WinRAR path for WinRAR settings.
+
+         For example, if you wish to store theme files in WinRAR folder,
+         set this value to "c:\Program Files\WinRAR".
+
+      d) Vista compatibility changes in WinRAR shell integration;
+
+      e) New "Request administrative access" option in "Advanced" page
+         of "Advanced SFX options" allows to create SFX archive,
+         which will request the administrative access when started
+         in Windows Vista.
+
+         Command line equivalent of this option is -iadm switch.
+
+   2. Added support for ISO 13346 (UDF) file format. This format
+      is frequently used in ISO images of DVD disks.
+
+   3. Added Unicode support for ISO 9660 files, so WinRAR should
+      handle non-English file names in .iso files better.
+
+   4. Design changes in window displaying archiving and extraction
+      progress:
+
+      a) it provides more space for file names, allowing lengthy names;
+
+      b) it displays the current archive name in separate line,
+         allowing much longer archive names than before;
+
+      c) when archiving, it displays the current compression ratio
+         in separate line;
+
+      d) it can use both standard Windows and classic WinRAR progress bars.
+         Turn on "Windows progress bars" option in WinRAR "Settings/General"
+         dialog to use standard progress bars. By default this option is
+         on if some Windows visual style is active and off if Windows Classic
+         theme is selected.
+
+         Windows progress bars are two color only, so they do not indicate
+         the current compression ratio. But now the ratio is displayed
+         in separate line;
+
+      e) "Mode..." button moved to bottom of window.
+
+   5. GUI self-extracting modules support following command line
+      switches:
+
+      -d<path>     set the destination path
+      -p<pwd>      specify a password
+      -s           silent mode, hide all
+      -s1          same as -s
+      -s2          silent mode, hide start dialog
+      -sp<par>     specify parameters for setup program
+
+   6. GUI self-extracting modules do not pass the entire command line
+      to setup program like they did in previous versions.
+      If you need to get access to entire command line of SFX archive,
+      parse sfxcmd environment variable which contains this command line.
+
+   7. New switch -sc<charset>[objects] allowing to select character
+      sets for archive comments and list files. It replaces -fcu switch
+      introduced in RAR 3.60, which was removed from list of supported
+      switches. Now you need to specify -scuc instead of -fcu to use
+      Unicode comments. Unlike -fcu, -sc also supports OEM and ANSI charset.
+
+   8. New "Save archive copy as..." command in "File" menu.
+      This command may be useful if you opened an archive from Internet
+      directly in WinRAR and then decided to save it on local disk.
+
+   9. "Word wrap" command added to "View" menu of WinRAR internal viewer,
+      so you can change the wrapping mode of already opened viewer window.
+
+      State of this option is not stored between viewing sessions.
+      If you need to change the default word wrap mode, use WinRAR
+      "Settings/Viewer" dialog.
+
+  10. Buttons "Up" and "Down" added to "Organize profiles" dialog.
+      Using these buttons you can change position of selected profile
+      in the list.
+
+  11. Operation progress is displayed when adding the recovery record.
+
+  12. If WinRAR is minimized to tray and mouse is over its icon,
+      WinRAR diplays a message about the current operation progress.
+      In previous versions it included only percent done, now it also
+      contains the time left information.
+
+  13. Console RAR displays "Calculating the control sum" message
+      when calculating CRC32 control sum for newly created RAR volume.
+      Previous versions also calculated the volume control sum,
+      but did it silently.
+
+  14. Archives history list in "File" menu allows Unicode names,
+      providing more reliable support for non-English archive names.
+
+  15. Stack overflow vulnerability has been corrected in password
+      processing module of console RAR and UnRAR. GUI WinRAR is not
+      affected. We are thankful to the iDEFENSE LABS for reporting this bug.
+
+
+   Version 3.62
+
+   1. Bugs fixed:
+
+      a) stack overflow vulnerability has been corrected in WinRAR module
+         processing 7-Zip archives;
+
+      b) WinRAR GZip module could set a wrong file date when unpacking
+         GZip archives.
+
+
+   Version 3.61
+
+   1. Corrected a bug in multithreaded text compression module,
+      which under some circumstances might result in corrupt archived data.
+
+      This bug was present only in multithreaded mode and only
+      in WinRAR 3.60. RAR versions for other platforms are not affected.
+
+   2. Resolved a compatibility issue preventing WinRAR 3.60 to run
+      in Windows 95.
+
+
+   Version 3.60
+
+   1. Multithreaded version of RAR compression algorithm improves
+      the compression speed on computers with several CPU,
+      dual core CPU and processors with hyperthreading technology.
+      Multithreading is enabled by default, but you can disable it
+      in "General" part of "Settings" dialog.
+      
+      In the command line mode you can control multithreading with
+      -mt<threads> switch.
+
+   2. WinRAR can display the folder tree panel allowing to navigate
+      in disk and archive folders. Use "Options/Folder tree" submenu
+      to enable the folder tree. It can be configured separately
+      in file and archive management modes.
+
+      Folder tree replaces "Browse for folder" command previously
+      available in "File" menu and uses its Ctrl+T keyboard shortcut.
+
+   3. Now WinRAR "Rename" command also works with ZIP archives.
+      Previous versions could rename files only in RAR archives.
+
+   4. Added decompression of LZH archives created with "-lh7-" algorithm.
+
+   5. New "Remove duplicate folders from extraction path" option
+      in "Settings/Compression" dialog.
+
+      If this option is on and you unpack an archive which root folder
+      has no files and only one 'somename' folder and if destination
+      folder is new or empty and also ends with '/somename', WinRAR
+      will exclude one 'somename' from resulting 'somename/somename' path.
+
+   6. New "Define volume sizes..." button in "Settings/Compression".
+      This button activates "Define volume sizes" dialog. Here you
+      can customize the list of predefined volume sizes associated
+      with "Split to volumes, bytes" field in archiving dialog.
+
+   7. Speed of RAR general compression increased for some data types.
+      Depending on data type and size the gain may achieve 5 - 15%.
+
+   8. New "Rename automatically" option in the extraction dialog
+      and command line -or switch to rename extracted files automatically
+      if file with the same name already exists. You can also enable
+      the auto-renaming mode directly from the overwrite confirmation
+      prompt with "Rename All" button.
+
+      Renamed files will get names like 'filename(N).txt',
+      where 'filename.txt' is the original file name and 'N' is a number.
+
+   9. "Set modification time" option in "Advanced" part of extraction
+      dialog is accessible also for ZIP archives. Previously it could be
+      changed only for RAR archives.
+
+  10. "Multithreading" option added to "Benchmark and hardware test"
+      command, so you can compare performance of usual and multithreaded
+      versions of RAR compression algorithm.
+
+  11. New 'ch' (change archive parameters) command line mode command.
+      Its purpose is to apply switches like -av, -tl and -cl to archive.
+
+  12. New 'cv' command line mode command. It provides the command line
+      interface to WinRAR "Convert archives" command. It is supported
+      only by winrar.exe, not by rar.exe.
+
+  13. New command line -sl<size> and -sm<size> switches to set size
+      limits of processing files.
+
+  14. New command line -fcu[file] switch allows to read archive
+      comments from Unicode files. It also modifies behavior
+      of "cw" command, setting the comment output format to Unicode.
+
+  15. 7Z added to list of formats stored without compression
+      when using -ms switch without a parameter.
+
+  16. Switch -e[+]<attr> is now supported by most of command line
+      operations including extracting and deleting files. Previously
+      it was supported by only archiving command.
+
+  17. It is allowed to use environment variables in archive name
+      in archiving dialog, in destination path in extraction dialog,
+      in folder names on "Compression" and "Paths" pages in WinRAR
+      settings. For example, you can enter '%temp%' in "Folder for
+      temporary files" field.
